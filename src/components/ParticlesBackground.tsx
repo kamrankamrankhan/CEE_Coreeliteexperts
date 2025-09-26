@@ -3,17 +3,16 @@
 import { useCallback } from 'react'
 import { useTheme } from '@/contexts/ThemeContext'
 import Particles from 'react-particles'
-import type { Container, Engine } from 'react-particles'
 import { loadFull } from 'tsparticles'
 
 export default function ParticlesBackground() {
   const { theme } = useTheme()
 
-  const particlesInit = useCallback(async (engine: Engine) => {
+  const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine)
   }, [])
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+  const particlesLoaded = useCallback(async (container: any) => {
     // console.log(container)
   }, [])
 

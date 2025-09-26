@@ -1,6 +1,17 @@
 {
-  "/services/page": "app/services/page.js",
+  "/_not-found": "app/_not-found.js",
+  "/3d-demo/page": "app/3d-demo/page.js",
   "/page": "app/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/services/3d-art/page": "app/services/3d-art/page.js",
+  "/services/ai-engineering/page": "app/services/ai-engineering/page.js",
+  "/services/cloud-engineering/page": "app/services/cloud-engineering/page.js",
+  "/services/devops/page": "app/services/devops/page.js",
+  "/services/digital-marketing/page": "app/services/digital-marketing/page.js",
+  "/services/graphic-design/page": "app/services/graphic-design/page.js",
+  "/services/page": "app/services/page.js",
   "/services/software-engineering/page": "app/services/software-engineering/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/services/ui-ux-design/page": "app/services/ui-ux-design/page.js",
+  "/services/video-editing/page": "app/services/video-editing/page.js",
+  "/test/page": "app/test/page.js"
 }

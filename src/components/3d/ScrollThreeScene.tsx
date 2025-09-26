@@ -125,14 +125,14 @@ export default function ScrollThreeScene({ className = '', height = '100vh' }: S
     const animate = () => {
       animationIdRef.current = requestAnimationFrame(animate)
 
+      // Calculate scroll progress once
+      const scrollProgress = scrollY / (document.documentElement.scrollHeight - window.innerHeight)
+      const scrollFactor = scrollProgress * 2 - 1 // Convert to -1 to 1 range
+
       // Update meshes based on scroll position
       meshes.forEach((mesh, index) => {
         const originalPos = originalPositions[index]
         const originalRot = originalRotations[index]
-        
-        // Scroll-based transformations
-        const scrollProgress = scrollY / (document.documentElement.scrollHeight - window.innerHeight)
-        const scrollFactor = scrollProgress * 2 - 1 // Convert to -1 to 1 range
         
         // Position changes based on scroll
         mesh.position.x = originalPos.x + Math.sin(scrollProgress * Math.PI * 2 + index) * 2

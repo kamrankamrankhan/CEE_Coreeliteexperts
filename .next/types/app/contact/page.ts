@@ -1,4 +1,4 @@
-// File: /home/chota/Desktop/Cee-company-proifle/src/app/contact/page.tsx
+// File: /home/chota/Desktop/CEE_Coreeliteexperts/src/app/contact/page.tsx
 import * as entry from '../../../../src/app/contact/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

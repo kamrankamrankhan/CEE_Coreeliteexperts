@@ -128,10 +128,11 @@ export default function ParticleScrollScene({
     const animate = () => {
       animationIdRef.current = requestAnimationFrame(animate)
 
+      const scrollProgress = scrollY / (document.documentElement.scrollHeight - window.innerHeight)
+      const scrollFactor = scrollProgress * 2 - 1
+
       if (particlesRef.current) {
         const positions = particlesRef.current.geometry.attributes.position.array as Float32Array
-        const scrollProgress = scrollY / (document.documentElement.scrollHeight - window.innerHeight)
-        const scrollFactor = scrollProgress * 2 - 1
 
         // Update particle positions based on scroll
         for (let i = 0; i < particleCount_actual; i++) {
