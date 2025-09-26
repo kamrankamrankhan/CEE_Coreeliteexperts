@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Story+Script&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-black dark:text-white bg-[#f4f4f4] dark:bg-black transition-colors duration-300;
+  }
+  
+  body.mobile-menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 25;
+    pointer-events: none;
+  }
+  
+  * {
+    @apply border-black dark:border-white;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-black dark:bg-white text-white dark:text-black font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:ring-offset-2 hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-white dark:bg-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black text-black dark:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:ring-offset-2 border-2 border-black dark:border-white;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-black rounded-2xl shadow-lg dark:shadow-black/20 p-6 border border-black dark:border-white;
+  }
+  
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-black to-black dark:from-white dark:to-white bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-primary {
+    @apply bg-[#f4f4f4] dark:bg-black;
+  }
+}
