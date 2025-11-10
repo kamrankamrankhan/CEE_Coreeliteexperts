@@ -280,21 +280,30 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[1, 2, 3, 4, 5].map((index) => (
+            {[
+              { src: '/cto.png', alt: 'CTO', name: 'Nool ul mubeen', title: 'CTO' },
+              { src: '/dev.png', alt: 'Developer', name: 'Hasnain Babar', title: 'Web Development Team Lead' }
+            ].map((member, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-xl bg-gray-200 dark:bg-gray-700"
+                className="w-full"
               >
-                <Image
-                  src={`/team${index}.jpg`}
-                  alt={`Team Member ${index}`}
-                  fill
-                  className="object-cover"
-                  unoptimized
-                />
+                <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-xl bg-gray-200 dark:bg-gray-700 mb-4">
+                  <Image
+                    src={member.src}
+                    alt={member.alt}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+                <div className="text-center">
+                  <p className="text-lg font-bold text-gray-900 dark:text-white">{member.name}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm">{member.title}</p>
+                </div>
               </motion.div>
             ))}
           </div>
