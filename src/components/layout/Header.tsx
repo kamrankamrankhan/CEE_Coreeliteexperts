@@ -31,24 +31,6 @@ const navigation: NavItem[] = [
       { label: 'Digital Marketers', href: '/services/digital-marketing' },
     ]
   },
-  { 
-    label: '3D Demo', 
-    href: '/3d-demo',
-    children: [
-      { label: 'Scroll Animations', href: '/3d-demo#scroll' },
-      { label: 'Particle Effects', href: '/3d-demo#particles' },
-      { label: 'Interactive Scenes', href: '/3d-demo#interactive' },
-    ]
-  },
-  { 
-    label: 'Solutions', 
-    href: '/solutions',
-    children: [
-      { label: 'E-commerce', href: '/solutions/ecommerce' },
-      { label: 'Enterprise', href: '/solutions/enterprise' },
-      { label: 'Startup', href: '/solutions/startup' },
-    ]
-  },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
