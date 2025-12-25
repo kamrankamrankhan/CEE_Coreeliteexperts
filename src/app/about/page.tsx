@@ -190,7 +190,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="mt-4 text-center">
-                  <p className="text-xl font-bold text-gray-900 dark:text-white">Touseef Sheraz</p>
+                  <p className="text-xl font-bold text-gray-900 dark:text-white">Tosif Sheraz</p>
                   <p className="text-gray-600 dark:text-gray-300 mt-1">CEO Coreeliteexperts</p>
                 </div>
               </motion.div>
