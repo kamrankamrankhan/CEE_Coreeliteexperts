@@ -83,10 +83,10 @@ export default function ServiceCard3D({ iconName, title, description, href, inde
   const translateZ = isHovered ? 20 : 0
 
   return (
-    <Link href={href} className="block">
+    <Link href={href} className="block w-full h-full">
       <div 
         ref={cardRef}
-        className="group bg-white dark:bg-[#242424] rounded-2xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 hover:border-[#0ebab1] relative overflow-hidden cursor-pointer"
+        className="group bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-200 hover:shadow-2xl transition-all duration-300 hover:border-[#0ebab1] relative overflow-hidden cursor-pointer w-full h-full min-h-[280px] sm:min-h-[300px] lg:min-h-[320px] flex flex-col"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
@@ -106,15 +106,15 @@ export default function ServiceCard3D({ iconName, title, description, href, inde
       {/* Content */}
       <div className="relative z-10">
         <div 
-          className="w-16 h-16 bg-[#0ebab1] rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300"
+          className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-[#0ebab1] rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 transition-transform duration-300"
           style={{
             transform: `translateZ(10px) rotateX(${rotateX * 0.3}deg) rotateY(${rotateY * 0.3}deg) scale(${isHovered ? 1.1 : 1})`
           }}
         >
-          <IconComponent className="w-8 h-8 text-white dark:text-black" />
+          <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white dark:text-black" />
         </div>
         <h3 
-          className="text-xl font-bold text-black dark:text-white mb-4 transition-transform duration-300"
+          className="text-lg sm:text-xl lg:text-xl font-bold text-black mb-3 sm:mb-4 transition-transform duration-300"
           style={{
             transform: `translateZ(5px) rotateX(${rotateX * 0.2}deg) rotateY(${rotateY * 0.2}deg)`
           }}
@@ -122,7 +122,7 @@ export default function ServiceCard3D({ iconName, title, description, href, inde
           {title}
         </h3>
         <p 
-          className="text-gray-600 dark:text-gray-300 leading-relaxed transition-transform duration-300"
+          className="text-sm sm:text-base lg:text-base text-black leading-relaxed transition-transform duration-300"
           style={{
             transform: `translateZ(2px) rotateX(${rotateX * 0.1}deg) rotateY(${rotateY * 0.1}deg)`
           }}

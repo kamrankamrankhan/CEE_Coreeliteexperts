@@ -54,12 +54,6 @@ const services = [
     href: '/services/video-editing'
   },
   {
-    iconName: 'Box',
-    title: '3D Artists',
-    description: 'Immersive 3D graphics and visualizations.',
-    href: '/services/3d-art'
-  },
-  {
     iconName: 'TrendingUp',
     title: 'Digital Marketers',
     description: 'Strategic digital marketing and growth solutions.',
@@ -215,6 +209,110 @@ function TestimonialCard3D({ testimonial, index }: TestimonialCard3DProps) {
             {testimonial.role}
           </div>
         </div>
+      </div>
+    </div>
+  )
+}
+
+function ServicesCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [cardsPerView, setCardsPerView] = useState(3)
+  const [gapSize, setGapSize] = useState(16)
+  const carouselRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      const width = window.innerWidth
+      let newCardsPerView
+      let newGapSize
+      if (width < 1024) {
+        newCardsPerView = 1
+        newGapSize = 8
+      } else {
+        newCardsPerView = 3
+        newGapSize = 16
+      }
+      setCardsPerView(newCardsPerView)
+      setGapSize(newGapSize)
+      setCurrentIndex(0)
+    }
+    updateCardsPerView()
+    window.addEventListener('resize', updateCardsPerView)
+    return () => window.removeEventListener('resize', updateCardsPerView)
+  }, [])
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex >= services.length - cardsPerView ? 0 : prevIndex + 1
+    )
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? services.length - cardsPerView : prevIndex - 1
+    )
+  }
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index)
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = prevIndex + 1
+        return nextIndex >= services.length - cardsPerView + 1 ? 0 : nextIndex
+      })
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [cardsPerView])
+
+  return (
+    <div className="relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="overflow-hidden">
+        <div 
+          ref={carouselRef}
+          className="flex gap-2 sm:gap-3 lg:gap-4 transition-transform duration-500 ease-in-out py-4 sm:py-6 lg:py-8"
+          style={{
+            transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`
+          }}
+        >
+          {services.map((service, index) => (
+            <div 
+              key={service.title} 
+              className="flex-shrink-0 flex justify-center items-stretch min-h-[280px] sm:min-h-[300px] lg:min-h-[320px]"
+              style={{ 
+                width: `calc(${100 / cardsPerView}% - ${cardsPerView === 1 ? '0px' : (cardsPerView - 1) * gapSize / cardsPerView + 'px'})`
+              }}
+            >
+              <ServiceCard3D
+                iconName={service.iconName}
+                title={service.title}
+                description={service.description}
+                href={service.href}
+                index={index}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex justify-center mt-4 sm:mt-6 lg:mt-8 space-x-2">
+        {Array.from({ length: Math.max(1, services.length - cardsPerView + 1) }).map((_, index) => {
+          const isActive = index === currentIndex
+          return (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-2 h-2 sm:w-2.5 sm:h-2.5 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${
+                isActive
+                  ? 'bg-[#0ebab1] scale-125' 
+                  : 'bg-black/30 dark:bg-white/50 hover:bg-black/50 dark:hover:bg-white/70'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          )
+        })}
       </div>
     </div>
   )
@@ -571,29 +669,18 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-white dark:bg-[#242424]">
-        <div className="container-custom">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black dark:text-white mb-6">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-[#242424]">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full lg:max-w-[80%] lg:w-[80%]">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold text-black dark:text-white mb-4 sm:mb-6">
               What We <span className="text-gradient">Offer</span>
             </h2>
-            <p className="text-xl text-black dark:text-white max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-black dark:text-white max-w-3xl mx-auto mb-3 sm:mb-4 px-4">
               Our diverse team of experts provides comprehensive solutions across all aspects of digital technology.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard3D
-                key={service.title}
-                iconName={service.iconName}
-                title={service.title}
-                description={service.description}
-                href={service.href}
-                index={index}
-              />
-            ))}
-          </div>
+          <ServicesCarousel />
         </div>
       </section>
 
