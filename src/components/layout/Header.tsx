@@ -65,7 +65,7 @@ export default function Header() {
     <header
       className={cn(
         'fixed lg:relative top-0 left-0 right-0 z-50 transition-all duration-300',
-        'bg-white dark:bg-[#1a1a1a] backdrop-blur-md shadow-lg border-b border-gray-300 dark:border-gray-600'
+        'bg-[#1a1a1a] backdrop-blur-md shadow-lg border-b border-gray-800'
       )}
     >
       <div className="container-custom">
@@ -78,7 +78,7 @@ export default function Header() {
                 alt="CEE Company Logo" 
                 width={100} 
                 height={100} 
-                className="w-24 h-16 sm:w-24 sm:h-16 lg:w-24 lg:h-16 xl:w-24 xl:h-16 relative z-10"
+                className="w-24 h-16 sm:w-24 sm:h-16 lg:w-24 lg:h-16 xl:w-24 xl:h-16 relative z-10 "
                 priority
               />
             </div>
@@ -92,7 +92,7 @@ export default function Header() {
                   <div className="relative group">
                     <Link
                       href={item.href}
-                      className="flex items-center space-x-1 text-black dark:text-white hover:text-black dark:hover:text-white transition-colors duration-200 font-medium"
+                      className="flex items-center space-x-1 text-white hover:text-white transition-colors duration-200 font-medium"
                     >
                       <span>{item.label}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
@@ -116,7 +116,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-black dark:text-white hover:text-black dark:hover:text-white transition-colors duration-200 font-medium"
+                    className="text-white hover:text-white transition-colors duration-200 font-medium"
                   >
                     {item.label}
                   </Link>
@@ -130,7 +130,7 @@ export default function Header() {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-transparent text-black dark:text-white"
+              className="p-2 rounded-lg bg-transparent text-white"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? (
@@ -151,7 +151,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 rounded-lg bg-transparent text-black dark:text-white"
+              className="lg:hidden p-2 rounded-lg bg-transparent text-white"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -167,7 +167,7 @@ export default function Header() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden border-t border-gray-300 dark:border-gray-600 fixed top-16 left-0 right-0 bg-white dark:bg-[#1a1a1a] z-40 max-h-[calc(100vh-4rem)] overflow-y-auto"
+              className="lg:hidden border-t border-gray-800 fixed top-16 left-0 right-0 bg-white dark:bg-[#1a1a1a] z-40 max-h-[calc(100vh-4rem)] overflow-y-auto"
             >
               <nav className="py-4 space-y-2">
                 {navigation.map((item) => (

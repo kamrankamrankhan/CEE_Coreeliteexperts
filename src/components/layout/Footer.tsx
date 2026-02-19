@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="lg:col-span-1">
               <div className="flex items-center mb-4">
                 <Image 
-                  src="/logo-dark.svg" 
+                  src="/logo-white.svg" 
                   alt="CEE Company Logo" 
                   width={80} 
                   height={80} 

@@ -1,4 +1,4 @@
-// File: /home/chota/Desktop/CEE_Coreeliteexperts/src/app/layout.tsx
+// File: /home/candi/Downloads/CEE_Coreeliteexperts/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
