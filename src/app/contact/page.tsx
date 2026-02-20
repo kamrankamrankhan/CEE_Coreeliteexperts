@@ -359,7 +359,8 @@ export default function ContactPage() {
                       Email Us
                     </h3>
                     <p className="text-secondary-600 dark:text-secondary-300">
-                      hello@ceecompany.com
+                      
+                     coreeliteexperts@gmail.com
                     </p>
                     <p className="text-secondary-500 dark:text-secondary-400 text-sm">
                       We typically respond within 24 hours
@@ -376,7 +377,10 @@ export default function ContactPage() {
                       Call Us
                     </h3>
                     <p className="text-secondary-600 dark:text-secondary-300">
-                      +1 (555) 123-4567
+                      +92 (342) 891-4050
+                    </p>
+                    <p className="text-secondary-600 dark:text-secondary-300">
+                      +92 (349) 976-3379
                     </p>
                     <p className="text-secondary-500 dark:text-secondary-400 text-sm">
                       Monday - Friday, 9:00 AM - 6:00 PM EST
@@ -393,8 +397,8 @@ export default function ContactPage() {
                       Visit Us
                     </h3>
                     <p className="text-secondary-600 dark:text-secondary-300">
-                      123 Innovation Drive<br />
-                      Tech City, TC 12345
+                      Danyour Chok<br />
+                      Thrift Society, 3rd Floor
                     </p>
                     <p className="text-secondary-500 dark:text-secondary-400 text-sm">
                       By appointment only
