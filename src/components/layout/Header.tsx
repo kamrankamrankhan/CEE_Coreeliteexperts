@@ -71,19 +71,19 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group relative">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group relative">
             <div className="relative">
               <Image 
                 src={theme === 'light' ? "/logo-white.svg" : "/logo-dark.svg"} 
                 alt="CEE Company Logo" 
                 width={100} 
                 height={100} 
-                className="w-24 h-16 sm:w-24 sm:h-16 lg:w-24 lg:h-16 xl:w-24 xl:h-16 relative z-10"
+                className="w-16 h-10 sm:w-20 sm:h-12 lg:w-24 lg:h-16 xl:w-24 xl:h-16 relative z-10"
                 priority
               />
             </div>
-            <span className="text-lg font-semibold text-black dark:text-white">
-              Company
+            <span className="text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight leading-none text-black dark:text-white">
+              <sub className="text-base sm:text-xl lg:text-2xl align-sub">Core Elite Experts</sub>
             </span>
           </Link>
 

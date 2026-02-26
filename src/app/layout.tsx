@@ -3,7 +3,7 @@ import './globals.css'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 
 export const metadata: Metadata = {
-  title: 'CEE Company',
+  title: 'Core Elite Experts',
   description: 'Empowering businesses with innovative digital solutions. We specialize in web development, mobile applications, and cutting-edge 3D visualization technologies.',
   keywords: 'web development, mobile apps, 3D visualization, digital solutions, technology consulting',
   authors: [{ name: 'CEE Company' }],
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/title2.png',
+        url: '/cee-01.png',
         media: '(prefers-color-scheme: dark)',
       },
     ],
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://ceecompany.com',
-    title: 'CEE Company - Innovative Digital Solutions',
-    description: 'Empowering businesses with innovative digital solutions.',
-    siteName: 'CEE Company',
+    title: 'Core Elite Experts',
+    description: 'Core Elite Experts – empowering businesses with innovative digital solutions.',
+    siteName: 'Core Elite Experts',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CEE Company - Innovative Digital Solutions',
-    description: 'Empowering businesses with innovative digital solutions.',
+    title: 'Core Elite Experts',
+    description: 'Core Elite Experts – empowering businesses with innovative digital solutions.',
   },
   robots: {
     index: true,

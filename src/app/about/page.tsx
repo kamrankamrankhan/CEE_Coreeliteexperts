@@ -282,7 +282,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
               { src: '/cto.png', alt: 'CTO', name: 'Nool ul mubeen', title: 'CTO' },
-              { src: '/dev.png', alt: 'Developer', name: 'Hasnain Babar', title: 'Web Development Team Lead' }
+              { src: '/dev.png', alt: 'Developer', name: 'Hasnain Babar', title: 'Web Development Team Lead' },
+              { src: '/emai-team-lead.jpg', alt: 'Email', name: 'Manzoor Ali Hakemzada', title: 'Marketing Manager' },
+              { src: '/book-keeper-teamlead.jpg', alt: 'Book Keeper', name: 'Asif Nawaz', title: 'Accounting & Book-keeping Team Lead' },
             ].map((member, index) => (
               <motion.div
                 key={index}
