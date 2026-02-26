@@ -71,7 +71,7 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group relative">
+          <Link href="/" className="flex items-center space-x-3 group relative">
             <div className="relative">
               <Image 
                 src={theme === 'light' ? "/logo-white.svg" : "/logo-dark.svg"} 
@@ -82,6 +82,9 @@ export default function Header() {
                 priority
               />
             </div>
+            <span className="text-lg font-semibold text-black dark:text-white">
+              Company
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
