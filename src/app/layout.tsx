@@ -3,11 +3,23 @@ import './globals.css'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 
 export const metadata: Metadata = {
-  title: 'CEE Company - Innovative Digital Solutions',
+  title: 'CEE Company',
   description: 'Empowering businesses with innovative digital solutions. We specialize in web development, mobile applications, and cutting-edge 3D visualization technologies.',
   keywords: 'web development, mobile apps, 3D visualization, digital solutions, technology consulting',
   authors: [{ name: 'CEE Company' }],
   creator: 'CEE Company',
+  icons: {
+    icon: [
+      {
+        url: '/logo-white.svg',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/title1.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+    ],
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

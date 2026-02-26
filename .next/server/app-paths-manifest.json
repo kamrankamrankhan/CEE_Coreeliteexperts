@@ -1,8 +1,3 @@
 {
-  "/not-found": "app/not-found.js",
-  "/contact/page": "app/contact/page.js",
-  "/page": "app/page.js",
-  "/about/page": "app/about/page.js",
-  "/services/ai-engineering/page": "app/services/ai-engineering/page.js",
-  "/services/page": "app/services/page.js"
+  "/page": "app/page.js"
 }
