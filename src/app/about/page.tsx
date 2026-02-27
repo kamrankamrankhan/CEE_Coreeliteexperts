@@ -375,23 +375,21 @@ export default function AboutPage() {
 
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
               <p>
-                We started our company in 2024 with a clear vision to make a difference in the digital world. 
-                From day one, our focus has been on delivering quality solutions and building strong relationships 
-                with our clients.
+              Although we are a growing company, we have quickly earned the trust of businesses looking for reliable and results-focused services. 
+              Our dedication to excellence and client success shapes everything we do.
               </p>
               <p>
-                Despite being a new company, we have quickly established ourselves as a trusted partner for businesses 
-                seeking innovative digital solutions. Our commitment to excellence and client success drives everything we do.
+              In our first year, we successfully delivered numerous projects across diverse industries, helping businesses strengthen their presence and achieve meaningful results.
+               Every project has provided valuable insights, allowing us to continuously improve and refine our approach
               </p>
               <p>
-                In our first year, we have successfully completed numerous projects across various industries, helping 
-                businesses transform their digital presence and achieve their goals. Each project has been a learning 
-                experience, and we continue to grow and improve with every challenge we face.
+              As we look ahead, we are excited about the opportunities to support more clients, expand our team, and create lasting impact.
+               Our journey is just beginning, and we remain committed to building a company defined by quality, progress, and long-term client success
               </p>
               <p>
-                Looking ahead, we are excited about the future and the opportunities to serve more clients, expand our 
-                team, and continue making a positive impact in the digital landscape. Our journey has just begun, and 
-                we are committed to building a company that stands for quality, innovation, and client success.
+              We believe in building lasting partnerships based on trust, transparency, and consistent performance.
+              Our team is driven by passion, precision, and a commitment to delivering measurable value in every project.
+              With every milestone we achieve, we strengthen our foundation for sustainable growth and long-term success.
               </p>
             </div>
           </motion.div>

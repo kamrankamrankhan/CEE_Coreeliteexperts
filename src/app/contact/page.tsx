@@ -141,8 +141,7 @@ export default function ContactPage() {
               Get in <span className="text-gradient">Touch</span>
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-secondary-600 dark:text-secondary-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ready to start your next project? Let's discuss how we can help bring your vision to life 
-              with our innovative digital solutions.
+            Ready to start your next project? Let’s talk about how we can turn your vision into reality with smart, results-driven solutions.
             </p>
           </div>
         </div>

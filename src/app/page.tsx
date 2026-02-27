@@ -479,9 +479,9 @@ export default function Home() {
             </div>
             
             <h1 className="text-4xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black dark:text-white mb-4 sm:mb-6 md:mb-8 leading-tight" style={{fontFamily: "'Story Script', cursive"}}>
-              <span className="block xs:inline">Innovative{' '}</span>
-              <span className="text-gradient">Digital Solutions</span>
-              <span className="block xs:inline">{' '}for Modern Businesses</span>
+              <span className="block xs:inline">Core{' '}</span>
+              <span className="text-gradient">Elite Experts</span>
+              <span className="block xs:inline">{' '}Smart Solutions for Modern Business Growth</span>
             </h1>
             
             <p className="text-lg sm:text-base md:text-lg lg:text-xl xl:text-2xl text-black dark:text-white mb-6 sm:mb-8 md:mb-10 lg:mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -567,6 +567,10 @@ export default function Home() {
               <span className="text-2xl text-white/60 dark:text-black/60">•</span>
               <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-white dark:text-black whitespace-nowrap">
                 Digital Marketers
+              </span>
+              <span className="text-2xl text-white/60 dark:text-black/60">•</span>
+              <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-white dark:text-black whitespace-nowrap">
+                Book keepings
               </span>
             </div>
           </Marquee>
