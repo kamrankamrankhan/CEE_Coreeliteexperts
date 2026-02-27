@@ -29,6 +29,7 @@ const navigation: NavItem[] = [
       { label: 'Video Editors', href: '/services/video-editing' },
       { label: '3D Artists', href: '/services/3d-art' },
       { label: 'Digital Marketers', href: '/services/digital-marketing' },
+      { label: 'Book Keepers', href: '/services/book-keepers' },
     ]
   },
   { label: 'About', href: '/about' },
@@ -102,7 +103,7 @@ export default function Header() {
                     </Link>
                     
                         {/* Desktop Hover Dropdown */}
-                        <div className="absolute top-full left-0 mt-2 w-96 bg-[#f4f4f4] dark:bg-gray-900 rounded-lg shadow-xl border border-gray-300 dark:border-gray-600 py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div className="absolute top-full left-0 mt-2 w-96 bg-white dark:bg-[#1a1a1a] rounded-lg shadow-xl border border-gray-300 dark:border-gray-600 py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                           <div className="grid grid-cols-2 gap-2">
                             {item.children.map((child) => (
                               <Link

@@ -1948,6 +1948,11 @@ video {
   border-color: rgb(255 255 255 / 0.1);
 }
 
+.dark\:border-black:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+}
+
 .dark\:bg-\[\#1a1a1a\]:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(26 26 26 / var(--tw-bg-opacity, 1));
